@@ -41,6 +41,10 @@
         box-shadow: 0 0 25px rgba(255, 85, 85, 0.4), 0 0 60px rgba(255, 85, 85, 0.15);
       }
     }
+    @keyframes flicker {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.2); opacity: 0.8; }
+    }
     #booking h2 {
       font-size: 2.8em;
       margin-bottom: 25px;
@@ -106,6 +110,9 @@
     }
     .tier:hover {
       transform: translateY(-10px) scale(1.03);
+    }
+    .tier:hover h3 i {
+      animation: flicker 0.6s ease-in-out;
     }
     .tier::before {
       content: "";
