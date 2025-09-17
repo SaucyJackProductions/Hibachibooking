@@ -30,6 +30,17 @@
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
+    @keyframes pulseGlow {
+      0% {
+        box-shadow: 0 0 25px rgba(255, 85, 85, 0.4), 0 0 60px rgba(255, 85, 85, 0.15);
+      }
+      50% {
+        box-shadow: 0 0 35px rgba(255, 120, 120, 0.6), 0 0 80px rgba(255, 120, 120, 0.3);
+      }
+      100% {
+        box-shadow: 0 0 25px rgba(255, 85, 85, 0.4), 0 0 60px rgba(255, 85, 85, 0.15);
+      }
+    }
     #booking h2 {
       font-size: 2.8em;
       margin-bottom: 25px;
@@ -91,10 +102,10 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       backdrop-filter: blur(6px);
       background-color: rgba(0, 0, 0, 0.45);
+      animation: pulseGlow 3s infinite;
     }
     .tier:hover {
       transform: translateY(-10px) scale(1.03);
-      box-shadow: 0 0 35px rgba(255, 100, 100, 0.6), 0 0 80px rgba(255, 100, 100, 0.3);
     }
     .tier::before {
       content: "";
