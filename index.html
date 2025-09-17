@@ -164,6 +164,19 @@
       }
     }
   </style>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const tiers = document.querySelectorAll('.tier');
+      const sizzle = new Audio('https://cdn.pixabay.com/audio/2023/03/30/audio_ee7a63df69.mp3');
+      sizzle.volume = 0.3;
+      tiers.forEach(tier => {
+        tier.addEventListener('mouseenter', () => {
+          sizzle.currentTime = 0;
+          sizzle.play();
+        });
+      });
+    });
+  </script>
 </head>
 <body>
 <section id="booking">
