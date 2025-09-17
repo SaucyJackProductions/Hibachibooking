@@ -9,12 +9,17 @@
   <style>
     html, body {
       scroll-behavior: smooth;
-      margin: 0;
-      padding: 0;
+      margin: 0 !important;
+      padding: 0 !important;
       font-family: 'Inter', sans-serif;
       background: linear-gradient(to bottom, #fffdf9, #ffe5dc);
       color: #1d1d1d;
       overflow-x: hidden;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
     #booking {
       text-align: center;
@@ -24,7 +29,7 @@
       background-size: 140%;
       background-position: center top;
       background-repeat: no-repeat;
-      margin-top: -10px;
+      margin: 0;
     }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
